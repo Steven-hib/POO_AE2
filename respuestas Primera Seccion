@@ -1,0 +1,30 @@
+1- ¿Qué es la encapsulación y por qué es importante en la Programación Orientada a Objetos?
+
+Se produce cuando un objeto esta en modo privado, que solo se pueda usar getters y setter.
+Esto hace que la Clase/objeto esta protegida. Se evita que el usuario pueda modificarlo 
+
+2- Diferencia entre un método y un constructor
+
+Un constructor se usa para crear objetos y iniciarlos con valores
+
+Un metodo se usa para llevar a cabo una tarea cuantas veces se quiera
+
+la diferencia es que el constructor se ejecuta una vez, el metodo se puede usar en muchas ocaciones 
+
+
+3- ¿Por qué los atributos deben ser privados y no públicos?
+
+Porque si fueran publicos todo mundo podria cambiarlos 
+
+4- ¿Qué función cumplen los getters y setters?
+
+Sirven para acceder y modificar los valores privados
+
+get devuelve el valor de algo
+
+set cambia su valor pero de forma controlada
+
+5- Verdadero o falso: “Un método setter no debe validar los datos que recibe.”
+
+Falso.
+Sí debe validar porque si no se podrían poner datos incorrectos y dañar algo

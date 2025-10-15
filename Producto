@@ -1,0 +1,59 @@
+/*
+ * Representa un producto con:
+ * Codigo
+ * Descripcion
+ * cantidad
+ * Precio Unitario
+ */
+
+ // Clase Producto
+
+public class Producto{
+    private String codigo;
+    private String descripcion;
+    private int cantidad;
+    private double precioUnitario;
+
+    // Constructor por defecto
+    public Producto() {
+        codigo = "000";
+        descripcion = "Sin descripción";
+        cantidad = 0;
+        precioUnitario = 0;
+    }
+
+    // Constructor con parámetros
+    public Producto(String c, String d, int cant, double precio) {
+        codigo = c;
+        descripcion = d;
+        cantidad = cant;
+        precioUnitario = precio;
+    }
+
+    // Método para calcular subtotal
+    public double calcularSubtotal() {
+        return cantidad * precioUnitario;
+    }
+
+    // Método para aplicar descuento
+    public double aplicarDescuento(double porcentaje) {
+        if (porcentaje > 0 && porcentaje <= 50) {
+            double subtotal = calcularSubtotal();
+            double descuento = subtotal * (porcentaje / 100);
+            double total = subtotal - descuento;
+            return total;
+        } else {
+            System.out.println("Descuento inválido");
+            return calcularSubtotal();
+        }
+    }
+
+    // Mostrar información
+    public void mostrarInfo() {
+        System.out.println("Código: " + codigo);
+        System.out.println("Descripción: " + descripcion);
+        System.out.println("Cantidad: " + cantidad);
+        System.out.println("Precio unitario: " + precioUnitario);
+        System.out.println("Subtotal: " + calcularSubtotal());
+    }
+}
